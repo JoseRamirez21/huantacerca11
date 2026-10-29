@@ -1,0 +1,148 @@
+/* Huanta Cerca - estilos propios sobre Bootstrap 5 */
+
+:root {
+    --hc-primary: #0f766e;
+    --hc-primary-dark: #115e59;
+    --hc-soft: #e6f4f1;
+    --hc-ink: #1f2937;
+    --hc-muted: #5b6472;
+    --hc-bg: #f6f8f7;
+    --hc-border: #dfe6e3;
+    --hc-radius: 14px;
+}
+
+body {
+    background: var(--hc-bg);
+    color: var(--hc-ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main { flex: 1 0 auto; }
+
+.text-muted { color: var(--hc-muted) !important; }
+
+/* Botones */
+.btn-primary {
+    --bs-btn-bg: var(--hc-primary);
+    --bs-btn-border-color: var(--hc-primary);
+    --bs-btn-hover-bg: var(--hc-primary-dark);
+    --bs-btn-hover-border-color: var(--hc-primary-dark);
+    --bs-btn-active-bg: var(--hc-primary-dark);
+    --bs-btn-active-border-color: var(--hc-primary-dark);
+    --bs-btn-disabled-bg: var(--hc-primary);
+    --bs-btn-disabled-border-color: var(--hc-primary);
+}
+
+.btn-link { color: var(--hc-primary-dark); }
+
+.btn-whatsapp {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #1a7f4b;
+    --bs-btn-border-color: #1a7f4b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #146c3f;
+    --bs-btn-hover-border-color: #146c3f;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #146c3f;
+    --bs-btn-active-border-color: #146c3f;
+}
+
+.spinner-border { color: var(--hc-primary); }
+
+/* Encabezado y pie */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--hc-border);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--hc-primary);
+}
+
+.site-header .nav-link { color: var(--hc-ink); }
+
+.site-footer {
+    background: #fff;
+    border-top: 1px solid var(--hc-border);
+    color: var(--hc-muted);
+    font-size: 0.9rem;
+    padding: 1.25rem 0;
+}
+
+/* Portada */
+.hero {
+    background: linear-gradient(135deg, var(--hc-primary-dark), var(--hc-primary));
+    color: #fff;
+    padding: 2.5rem 0 4rem;
+}
+
+.buscador-wrap { margin-top: -2.25rem; }
+
+.buscador-card {
+    border: 0;
+    border-radius: var(--hc-radius);
+}
+
+/* Filtros por categoría */
+.chip {
+    background: #fff;
+    border: 1px solid var(--hc-border);
+    border-radius: 999px;
+    color: var(--hc-ink);
+    padding: 0.3rem 0.85rem;
+}
+
+.chip:hover {
+    border-color: var(--hc-primary);
+    color: var(--hc-primary-dark);
+}
+
+.chip-activo,
+.chip-activo:hover {
+    background: var(--hc-primary);
+    border-color: var(--hc-primary);
+    color: #fff;
+}
+
+/* Tarjetas de negocios */
+.negocio-card {
+    background: #fff;
+    border: 1px solid var(--hc-border);
+    border-radius: var(--hc-radius);
+    transition: box-shadow 0.15s ease;
+}
+
+.negocio-card:hover { box-shadow: 0 6px 18px rgba(15, 118, 110, 0.12); }
+
+.etiqueta-categoria {
+    background: var(--hc-soft);
+    color: var(--hc-primary-dark);
+    font-weight: 600;
+}
+
+.descripcion {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+}
+
+/* Detalle */
+.detalle-card {
+    background: #fff;
+    border: 1px solid var(--hc-border);
+    border-radius: var(--hc-radius);
+}
+
+/* Estados: vacío, error, no disponible */
+.estado-caja {
+    background: #fff;
+    border: 1px dashed var(--hc-border);
+    border-radius: var(--hc-radius);
+    padding: 2.5rem 1.5rem;
+}
