@@ -1,0 +1,15 @@
+# Esta carpeta sí es pública
+Require all granted
+
+Options -Indexes
+
+RewriteEngine On
+
+# Conserva la cabecera Authorization (la usaremos para el token)
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Si no es un archivo ni una carpeta real, procesa con index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

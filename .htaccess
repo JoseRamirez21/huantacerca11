@@ -1,0 +1,4 @@
+# Bloquea el acceso directo desde el navegador a TODO el proyecto
+# (.env, app/, database/, storage/, .git ...).
+# Solo se vuelven a permitir las carpetas public/ de api y web.
+Require all denied
